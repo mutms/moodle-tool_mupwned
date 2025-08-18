@@ -35,7 +35,7 @@ final class lib_test extends \advanced_testcase {
     }
 
     /**
-     * @covers tool_mupwned_print_password_policy
+     * @covers ::tool_mupwned_print_password_policy
      */
     public function test_tool_mupwned_print_password_policy(): void {
         set_config('enabled', 0, 'tool_mupwned');
@@ -59,7 +59,7 @@ final class lib_test extends \advanced_testcase {
     }
 
     /**
-     * @covers tool_mupwned_check_password_policy
+     * @covers ::tool_mupwned_check_password_policy
      */
     public function test_tool_mupwned_check_password_policy(): void {
         global $DB;
@@ -74,7 +74,7 @@ final class lib_test extends \advanced_testcase {
         set_config('maxconsecutiveidentchars', 0);
 
         $user = $this->getDataGenerator()->create_user(['password' => 'something']);
-        $this->assertStringStartsWith('$6$rounds=', $user->password); // Anything but 'not set';
+        $this->assertStringStartsWith('$6$rounds=', $user->password); // Anything but 'not set'.
 
         set_config('enabled', 0, 'tool_mupwned');
         set_config('resetpassword', 0, 'tool_mupwned');
