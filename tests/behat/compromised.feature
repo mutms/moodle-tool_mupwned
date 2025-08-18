@@ -79,7 +79,7 @@ Feature: Test tool_mpwned compromised password blocking
     Then I should see "An email should have been sent to your address"
     And I should not see "This password was compromised during a data breach."
     And I should not see "Passwords must be at least 4 characters long."
-    
+
     When I confirm email for "user3"
     And I should see "Thanks, Third User"
     And I log out
