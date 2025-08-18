@@ -36,7 +36,7 @@ $string['event_user_login_blocked'] = 'Log-in with compromised password blocked'
 $string['expiretokens'] = 'Expire web service and mobile tokens';
 $string['expiretokens_desc'] = 'If enabled users who are forced to reset compromised passwords must also recreate all web service tokens
 and log into their mobile apps again.';
-$string['passwordpolicy'] = 'password must not be included in known data breeches';
+$string['passwordpolicy'] = 'not been included in known data breaches';
 $string['passwordpolicyinactive'] = '***Either "Password policy" or "Check password on login" is not enabled, blocking of compromised passwords will NOT work.***';
 $string['pluginname'] = 'Compromised password blocking';
 $string['privacy:metadata'] = 'Compromised password blocking plugin does not store any personal information';

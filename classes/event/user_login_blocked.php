@@ -39,6 +39,7 @@ final class user_login_blocked extends base {
      */
     public static function create_from_user(stdClass $user, int $service): static {
         $data = [
+            'objectid' => $user->id,
             'context' => \context_user::instance($user->id),
             'userid' => $user->id,
             'relateduserid' => $user->id,
@@ -52,7 +53,8 @@ final class user_login_blocked extends base {
 
     #[\Override]
     protected function init(): void {
-        $this->data['crud'] = 'r';
+        $this->data['objecttable'] = 'user';
+        $this->data['crud'] = 'u';
         $this->data['edulevel'] = self::LEVEL_OTHER;
     }
 

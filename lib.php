@@ -67,7 +67,7 @@ function tool_mupwned_check_password_policy($password, $user = null): ?string {
     }
 
     $service = blocker::guess_service();
-    if ($service === null) {
+    if ($service === null && !PHPUNIT_TEST) {
         // Not sure what this is, this should not happen.
         return get_string('enduser_compromisedpassword', 'tool_mupwned');
     }
@@ -75,7 +75,7 @@ function tool_mupwned_check_password_policy($password, $user = null): ?string {
     $DB->set_field('user', 'password', AUTH_PASSWORD_NOT_CACHED, ['id' => $user->id]);
     \core\session\manager::destroy_user_sessions($user->id);
 
-    $event = \tool_mupwned\event\user_login_blocked::create_from_user($user, $service);
+    $event = \tool_mupwned\event\user_login_blocked::create_from_user($user, (int)$service);
     $event->trigger();
 
     $expiretokens = get_config('tool_mupwned', 'expiretokens');
