@@ -41,8 +41,8 @@ function tool_mupwned_print_password_policy(): array {
 /**
  * Compromised password check.
  *
- * @param $password
- * @param $user
+ * @param mixed $password
+ * @param stdClass|null $user
  * @return string|null
  */
 function tool_mupwned_check_password_policy($password, $user = null): ?string {
