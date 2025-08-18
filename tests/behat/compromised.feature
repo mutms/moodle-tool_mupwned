@@ -31,6 +31,7 @@ Feature: Test tool_mpwned compromised password detection
 
     When I set the field "Username" to "user2"
     And I press "Search"
+    And I wait "1" seconds
     And I should see "If you supplied a correct username"
     And I open password reset confirmation for user "user2"
     And I set the field "New password" to "PoPhdsh675-_"
