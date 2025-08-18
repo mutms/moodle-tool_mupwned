@@ -19,7 +19,7 @@
 namespace tool_mupwned\privacy;
 
 /**
- * Compromised passwords privacy provider.
+ * Compromised passwords blocking privacy provider.
  *
  * @package     tool_mupwned
  * @copyright   2025 Petr Skoda

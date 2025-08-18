@@ -17,7 +17,7 @@
 // phpcs:disable moodle.Files.BoilerplateComment.CommentEndedTooSoon
 
 /**
- * Compromised password settings.
+ * Compromised password blocking settings.
  *
  * @package    tool_mupwned
  * @copyright  2025 Petr Skoda

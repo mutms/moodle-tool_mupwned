@@ -23,7 +23,7 @@ namespace tool_mupwned\phpunit\local;
 use tool_mupwned\local\blocker;
 
 /**
- * Compromised passwords blocker tests.
+ * Compromised passwords blocking tests.
  *
  * @group       MuTMS
  * @package     tool_mupwned

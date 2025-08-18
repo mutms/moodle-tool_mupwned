@@ -17,7 +17,7 @@
 // phpcs:disable moodle.Files.BoilerplateComment.CommentEndedTooSoon
 
 /**
- * Compromised password detection and blocking plugin lang pack.
+ * Compromised password blocking plugin lang pack.
  *
  * @package     tool_mupwned
  * @copyright   2025 Petr Skoda

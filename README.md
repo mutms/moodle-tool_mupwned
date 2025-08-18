@@ -1,4 +1,4 @@
-# Compromised passwords detection plugin for Moodle™ LMS
+# Compromised passwords blocking plugin for Moodle™ LMS
 
 ![Moodle Plugin CI](https://github.com/mutms/moodle-tool_mupwned/actions/workflows/moodle-ci.yml/badge.svg)
 
