@@ -34,6 +34,9 @@ $settings = new admin_settingpage(
     new lang_string('pluginname', 'tool_mupwned'),
     'moodle/site:config'
 );
+if (!$ADMIN->locate('authsettings')) {
+    return;
+}
 $ADMIN->add('authsettings', $settings);
 if ($ADMIN->fulltree) {
     $warning = '';
