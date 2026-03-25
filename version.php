@@ -31,4 +31,4 @@ $plugin->component = 'tool_mupwned';
 $plugin->version = 2026032650;
 $plugin->requires = 2025041400;
 $plugin->supported = [500, 501];
-$plugin->release = 'v5.0.6.02+';
+$plugin->release = 'v5.0.6.03';
