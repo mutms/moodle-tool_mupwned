@@ -21,26 +21,24 @@
 namespace tool_mupwned\phpunit\local;
 
 use tool_mupwned\local\blocker;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Compromised passwords blocking tests.
  *
- * @group       MuTMS
  * @package     tool_mupwned
  * @copyright   2025 Petr Skoda
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- *
- * @coversDefaultClass \tool_mupwned\local\blocker
  */
+#[CoversClass(\tool_mupwned\local\blocker::class)]
+#[Group('MuTMS')]
 final class blocker_test extends \advanced_testcase {
     public function setUp(): void {
         parent::setUp();
         $this->resetAfterTest();
     }
 
-    /**
-     * @covers ::is_password_compromised
-     */
     public function test_is_password_compromised(): void {
         $this->assertTrue(blocker::is_password_compromised('123456'));
         $this->assertFalse(blocker::is_password_compromised('jh&*^gghgJHGJHG875598JKLJGDSdjsagds=-=;./'));

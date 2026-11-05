@@ -20,23 +20,25 @@
 
 namespace tool_mupwned\phpunit;
 
+use PHPUnit\Framework\Attributes\CoversFunction;
+use PHPUnit\Framework\Attributes\Group;
+
 /**
  * Compromised passwords blocking tests.
  *
- * @group       MuTMS
  * @package     tool_mupwned
  * @copyright   2025 Petr Skoda
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+#[CoversFunction('tool_mupwned_print_password_policy')]
+#[CoversFunction('tool_mupwned_check_password_policy')]
+#[Group('MuTMS')]
 final class lib_test extends \advanced_testcase {
     public function setUp(): void {
         parent::setUp();
         $this->resetAfterTest();
     }
 
-    /**
-     * @covers ::tool_mupwned_print_password_policy
-     */
     public function test_tool_mupwned_print_password_policy(): void {
         set_config('enabled', 0, 'tool_mupwned');
         set_config('passwordpolicy', 0);
@@ -58,9 +60,6 @@ final class lib_test extends \advanced_testcase {
         $this->assertSame('The password must have at least 4 characters, not been included in known data breaches', print_password_policy());
     }
 
-    /**
-     * @covers ::tool_mupwned_check_password_policy
-     */
     public function test_tool_mupwned_check_password_policy(): void {
         global $DB;
 
