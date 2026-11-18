@@ -36,7 +36,7 @@ tramite il servizio [Have I Been Pwned](https://haveibeenpwned.com/) con il [mod
 $string['enduser_compromisedpassword'] = 'Questa password è stata compromessa in una violazione dei dati.';
 $string['enduser_expiretokens_info'] = 'Potrebbe inoltre essere necessario creare nuovi token dei web service e autenticarsi di nuovo nell\'app mobile.';
 $string['enduser_resetpassword_info'] = 'La tua password è già comparsa in una violazione dei dati, per motivi di sicurezza non può essere utilizzata per accedere a questo sito. Per effettuare il login devi reimpostare manualmente la password.';
-$string['event_user_login_blocked'] = 'Login con password compromessa bloccato';
+$string['event_user_login_blocked'] = 'Blocco del login con password compromessa';
 $string['expiretokens'] = 'Fai scadere i token dei web service e dell\'app mobile';
 $string['expiretokens_desc'] = 'Se l\'impostazione è abilitata, gli utenti obbligati a reimpostare una password compromessa devono anche ricreare tutti i token dei web service
 ed effettuare nuovamente il login nelle app mobile.';
